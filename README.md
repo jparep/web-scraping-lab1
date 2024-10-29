@@ -22,3 +22,37 @@ To run this project, you will need:
 Install the required libraries using:
 ```bash
 pip install selenium beautifulsoup4 pandas
+```
+
+## Project Structure
+
+- scraper.py: The main script for running the web scraping logic.
+- config.py: Configures the URL and parameters used for web scraping.
+d- ata/: Directory where the collected data (CSV/Excel) will be stored.
+
+
+## Usage
+
+1. **Set Up WebDriver**:
+   - Download the appropriate WebDriver for your browser (e.g., ChromeDriver for Chrome) and place it in your PATH or specify its path in `scraper.py`.
+
+2. **Configure the URL and Selectors**:
+   - Modify `config.py` to set the URL of the site containing Tesla's revenue data and update selectors if needed.
+
+3. **Run the Scraper**:
+   ```bash
+   python scraper.py
+   ```
+
+## Sample Output
+
+The output file will contain columns such as:
+
+    Year
+    Quarter (if quarterly data)
+    Revenue
+    Timestamp (date and time of data extraction)
+
+## License
+
+This project is licensed under the MIT License.
